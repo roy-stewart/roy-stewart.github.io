@@ -1,0 +1,20 @@
+---
+---
+
+<head>
+    <title>{{ site.title }} | {{ site.subtitle }}</title>
+    <link rel="stylesheet" href="/main.css" type="text/css">
+</head>
+<body>
+    {% include header.html %}
+
+    <div id="center-body">
+        {% include nav.html %}
+
+        <main>
+            {{ content }}
+        </main>
+    </div>
+
+    {% include footer.html %}
+</body>

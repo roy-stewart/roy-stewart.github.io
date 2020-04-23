@@ -1,0 +1,8 @@
+<nav>
+    {% for link in site.data.navbar_links %}
+        <a href="{{link.url}}" class="nav-link">{{ link.name }}</a>
+        {% unless forloop.last %}
+            <hr>
+        {% endunless %}
+    {% endfor %}
+</nav>
