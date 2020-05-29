@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<header>
+    <span class="section-title">{{ page.title }}</span>
+    <span>{{ page.date }}</span>
+    <span>{{ page.author }}</span>
+</header>
+
+<article>
+    {{ content }}
+</article>
+
+{% include recent_posts.html %}
