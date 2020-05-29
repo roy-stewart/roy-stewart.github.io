@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<header class="block-element">
+    <span class="section-title">
+        {{ page.title }}
+    </span>
+</header>
+
+<section class="card-gallery">
+    {% for item in page.gallery_items %}
+        {% capture itemUrl %} {{ item.url }} {% endcapture %}
+        {% capture itemName %} {{ item.name }} {% endcapture %}
+        {% capture itemDescription %} {{ item.description }} {% endcapture %}
+        {% include gallery_card.html url=itemUrl name=itemName description=itemDescription %}
+    {% endfor %}
+</section>
