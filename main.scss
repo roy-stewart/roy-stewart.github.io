@@ -2,10 +2,9 @@
 ---
 
 @import 'variables';
-
-$block-spacing: 1rem;
-
-$block-padding: $block-spacing / 2;
+@import 'breakpoints';
+@import 'page_layout';
+@import 'gallery';
 
 // block styling
 .block-element, nav, article, header, #site-footer {
@@ -16,110 +15,6 @@ $block-padding: $block-spacing / 2;
     margin: $block-spacing / 2;
 }
 
-nav {
-    height: auto;
-    flex-basis: 12rem;
-    display: flex;
-    flex-direction: column;
-    min-width: 8em;
-    flex-grow: 1;
-}
-
-a:visited {
-    color: $visited-link-color;
-}
-
-#site-title-block {
-    display: flex;
-    flex-direction: column;
-}
-
-#site-header-title {
-    font-size: 2em;
-}
-
-#site-footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-#site-footer-description {
-    flex-basis: 30em;
-}
-
-hr {
-    width: 100%;
-}
-
-html {
-    height: 100%;
-}
-
-body {
-    background-color: $body-background-color;
-    color: $text-color;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: calc(100% - 1rem);
-}
-
-main {
-    flex: 6 30em;
-}
-
-#center-body {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: stretch;
-    align-content: baseline;
-    flex-grow: 1;
-}
-
 .section-title {
     font-size: 2em;
-}
-
-.card-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-$portfolio-card-height: 8em;
-
-.portfolio-entry-card {
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: start;
-    justify-content: space-between;
-
-    img {
-        margin: - $block-padding;
-        padding: 0;
-        height: $portfolio-card-height;
-        width: $portfolio-card-height * 1.5;
-    }
-
-    span {
-        display: flex;
-        justify-content: start;
-    }
-
-    &:nth-child(even).portfolio-entry-card {
-        flex-direction: row-reverse;
-
-        img {
-            margin-left: 1em;
-        }
-    }
-
-    &:nth-child(odd).portfolio-entry-card {
-        img {
-            margin-right: 1em;
-        }
-    }
 }

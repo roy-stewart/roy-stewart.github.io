@@ -1,0 +1,52 @@
+.card-gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+$portfolio-card-height: 8em;
+
+.portfolio-entry-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+
+  img {
+    margin: - $block-padding;
+    padding: 0;
+    height: $portfolio-card-height;
+    width: $portfolio-card-height * 1.5;
+  }
+
+  span {
+    display: flex;
+    justify-content: start;
+  }
+
+  &:nth-child(even).portfolio-entry-card {
+    flex-direction: row-reverse;
+
+    img {
+      margin-left: 1em;
+    }
+  }
+
+  &:nth-child(odd).portfolio-entry-card {
+    img {
+      margin-right: 1em;
+    }
+  }
+}
+
+@include tablet {
+  .card-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include large-computer {
+  .card-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

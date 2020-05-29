@@ -1,0 +1,92 @@
+nav {
+  height: auto;
+  flex-basis: 12rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+a:visited {
+  color: $visited-link-color;
+}
+
+#site-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+#site-header-title {
+  font-size: 2em;
+}
+
+#site-footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+#site-footer-description {
+  flex-basis: 30em;
+}
+
+hr {
+  width: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $body-background-color;
+  color: $text-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: calc(100% - 1rem);
+}
+
+main {
+  flex: 6 30em;
+}
+
+#center-body {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: stretch;
+  align-content: baseline;
+  flex-grow: 1;
+}
+
+@include small-computer {
+  nav {
+    flex-basis: 12rem;
+    min-width: 8em;
+    max-width: 12em;
+  }
+
+  body {
+    background-color: $body-background-color;
+    color: $text-color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100% - 1rem);
+  }
+
+  main {
+    flex: 6 30em;
+  }
+
+  #center-body {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: stretch;
+    align-content: baseline;
+    flex-grow: 1;
+  }
+}
