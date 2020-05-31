@@ -1,9 +1,26 @@
-nav {
-  height: auto;
-  flex-basis: 12rem;
+#site-nav-menu {
+  display: none;
+
+  &.shown {
+    display: flex;
+    height: min-content;
+    flex-direction: column;
+  }
+}
+
+#site-header {
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+  flex-direction: row;
+  align-items: center;
+}
+
+#nav-menu-button {
+  font-size: 3rem;
+  padding: 0.1em 0.15em;
+  margin: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #2c2b2c;
 }
 
 a:visited {
@@ -20,6 +37,7 @@ a:visited {
 }
 
 #site-footer {
+  justify-self: end;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -34,6 +52,10 @@ hr {
 }
 
 html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
   height: 100%;
 }
 
@@ -45,19 +67,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   min-height: calc(100% - 1rem);
+  max-width: 120ch;
+  align-items: stretch;
 }
 
 main {
   flex: 6 30em;
-}
-
-#center-body {
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: stretch;
-  align-content: baseline;
-  flex-grow: 1;
 }
 
 @include small-computer {
@@ -79,14 +94,5 @@ main {
 
   main {
     flex: 6 30em;
-  }
-
-  #center-body {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: stretch;
-    align-content: baseline;
-    flex-grow: 1;
   }
 }

@@ -4,17 +4,18 @@
 <head>
     <title>{{ site.title }} | {{ site.subtitle }}</title>
     <link rel="stylesheet" href="/main.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+    <script src="/main.js" type="application/javascript"></script>
 </head>
 <body>
     {% include header.html %}
 
-    <div id="center-body">
-        {% include nav.html %}
+    {% include nav.html %}
 
-        <main>
-            {{ content }}
-        </main>
-    </div>
+    <main>
+        {{ content }}
+    </main>
 
     {% include footer.html %}
 </body>
