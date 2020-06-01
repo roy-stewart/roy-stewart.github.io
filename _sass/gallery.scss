@@ -6,7 +6,7 @@
 
 $portfolio-card-height: 12em;
 
-a.portfolio-entry-card {
+.portfolio-entry-card {
   padding: 0;
 
   overflow: hidden;
@@ -18,7 +18,7 @@ a.portfolio-entry-card {
   height: $portfolio-card-height;
 
   .preview {
-    transition-property: max-height;
+    transition-property: max-height, min-height;
     transition-duration: 0.8s;
 
     padding: 0;
