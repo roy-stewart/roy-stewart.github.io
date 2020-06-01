@@ -23,11 +23,30 @@
   }
 }
 
+.block-element {
+  background-color: $block-background-color;
+  border-radius: $block-border-radius;
+  padding: $block-padding;
+  border: 1px solid black;
+  margin: $block-spacing / 2;
+  box-shadow: 0.2rem 0.2rem 0.3rem #00000088;
+}
+
 #site-header {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
+
+#site-title-block {
+  display: flex;
+  flex-direction: column;
+}
+
+#site-header-title {
+  font-size: 2em;
+}
+
 
 #nav-menu-button {
   font-size: 3rem;
@@ -40,15 +59,6 @@
 
 a:visited {
   color: $visited-link-color;
-}
-
-#site-title-block {
-  display: flex;
-  flex-direction: column;
-}
-
-#site-header-title {
-  font-size: 2em;
 }
 
 #site-footer {

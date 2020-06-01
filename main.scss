@@ -6,15 +6,6 @@
 @import 'page_layout';
 @import 'gallery';
 
-.block-element {
-    background-color: $block-background-color;
-    border-radius: $block-border-radius;
-    padding: $block-padding;
-    border: 1px solid black;
-    margin: $block-spacing / 2;
-    box-shadow: 0.2rem 0.2rem 0.3rem #00000088;
-}
-
 .section-title {
     font-size: 2em;
     font-weight: bold;
