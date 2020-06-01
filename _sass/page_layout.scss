@@ -1,10 +1,25 @@
 #site-nav-menu {
-  display: none;
+  overflow: hidden;
+
+  transition-property: max-height, margin, padding, border;
+  transition-duration: 0.7s;
+
+  display: flex;
+  flex-direction: column;
+
+  &:not(.shown) {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+    border: solid 0 black;
+    box-shadow: none;
+  }
 
   &.shown {
-    display: flex;
-    height: min-content;
-    flex-direction: column;
+    max-height: 9rem;
   }
 }
 
@@ -76,11 +91,6 @@ main {
 }
 
 @include small-computer {
-  nav {
-    flex-basis: 12rem;
-    min-width: 8em;
-    max-width: 12em;
-  }
 
   body {
     background-color: $body-background-color;

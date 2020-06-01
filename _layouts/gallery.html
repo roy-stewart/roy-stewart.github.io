@@ -10,9 +10,10 @@ layout: default
 
 <section class="card-gallery">
     {% for item in page.gallery_items %}
+        {% capture itemPreview %} {{ item.preview_image }} {% endcapture %}
         {% capture itemUrl %} {{ item.url }} {% endcapture %}
         {% capture itemName %} {{ item.name }} {% endcapture %}
         {% capture itemDescription %} {{ item.description }} {% endcapture %}
-        {% include gallery_card.html url=itemUrl name=itemName description=itemDescription %}
+        {% include gallery_card.html url=itemUrl name=itemName description=itemDescription preview_image=itemPreview %}
     {% endfor %}
 </section>
