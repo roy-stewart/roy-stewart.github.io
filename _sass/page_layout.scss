@@ -80,9 +80,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   min-height: calc(100% - 1rem);
-  max-width: 120ch;
+  width: min(120ch, 100%);
   align-items: stretch;
 }
 
@@ -98,11 +98,8 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     min-height: calc(100% - 1rem);
   }
 
-  main {
-    flex: 6 30em;
-  }
 }

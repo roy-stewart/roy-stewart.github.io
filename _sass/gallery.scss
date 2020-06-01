@@ -1,40 +1,51 @@
 .card-gallery {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  grid-gap: 1.5rem;
 }
 
-$portfolio-card-height: 8em;
+$portfolio-card-height: 12em;
 
-.portfolio-entry-card {
+a.portfolio-entry-card {
+  padding: 0;
+
   overflow: hidden;
   display: flex;
-  flex-direction: row;
-  align-items: start;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: space-between;
 
-  img {
-    margin: - $block-padding;
+  height: $portfolio-card-height;
+
+  .preview {
+    transition-property: max-height;
+    transition-duration: 0.8s;
+
     padding: 0;
-    height: $portfolio-card-height;
-    width: $portfolio-card-height * 1.5;
+    margin: 0;
+    flex-grow: 1;
+    min-height: $portfolio-card-height - 2em;
+    max-height: $portfolio-card-height - 2em;
+    width: 100%;
   }
 
-  span {
-    display: flex;
-    justify-content: start;
+  .gallery-card-name {
+    text-align: center;
+    font-weight: bold;
+    background-color: #2c2b2c;
+    padding: 0.5em;
   }
 
-  &:nth-child(even).portfolio-entry-card {
-    flex-direction: row-reverse;
-
-    img {
-      margin-left: 1em;
-    }
+  .gallery-card-description {
+    padding: 1em;
+    max-height: $portfolio-card-height;
+    flex-grow: 1;
   }
 
-  &:nth-child(odd).portfolio-entry-card {
-    img {
-      margin-right: 1em;
+  &:hover {
+    .preview {
+      min-height: 0;
+      max-height: 0;
     }
   }
 }
@@ -47,6 +58,6 @@ $portfolio-card-height: 8em;
 
 @include large-computer {
   .card-gallery {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
