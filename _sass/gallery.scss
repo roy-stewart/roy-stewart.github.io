@@ -4,7 +4,9 @@
   grid-gap: 1.5rem;
 }
 
-$portfolio-card-height: 12em;
+$portfolio-card-height: 12rem;
+
+$card-name-displaced-height: 2rem;
 
 .portfolio-entry-card {
   padding: 0;
@@ -18,14 +20,14 @@ $portfolio-card-height: 12em;
   height: $portfolio-card-height;
 
   .preview {
-    transition-property: max-height, min-height;
+    transition-property: margin-top;
     transition-duration: 0.8s;
 
     padding: 0;
     margin: 0;
     flex-grow: 1;
-    min-height: $portfolio-card-height - 2em;
-    max-height: $portfolio-card-height - 2em;
+    min-height: $portfolio-card-height - $card-name-displaced-height;
+    max-height: $portfolio-card-height - $card-name-displaced-height;
     width: 100%;
   }
 
@@ -44,8 +46,7 @@ $portfolio-card-height: 12em;
 
   &:hover {
     .preview {
-      min-height: 0;
-      max-height: 0;
+      margin-top: - ($portfolio-card-height - $card-name-displaced-height);
     }
   }
 }
