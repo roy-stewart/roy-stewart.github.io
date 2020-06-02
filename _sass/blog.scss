@@ -1,0 +1,22 @@
+.post-preview-data {
+  display: flex;
+  flex-direction: column;
+}
+
+#blog-page-numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog-page-number {
+  margin: auto 0.5ch;
+}
+
+.current-page-number {
+  color: $visited-link-color;
+}
+
+.incremental-page-navigation-button {
+  margin: auto 1em;
+}

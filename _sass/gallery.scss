@@ -1,7 +1,7 @@
 .card-gallery {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 1.5rem;
+  grid-gap: 1rem;
 }
 
 $portfolio-card-height: 12rem;
@@ -29,6 +29,8 @@ $card-name-displaced-height: 2rem;
     min-height: $portfolio-card-height - $card-name-displaced-height;
     max-height: $portfolio-card-height - $card-name-displaced-height;
     width: 100%;
+
+    text-align: center;
   }
 
   .gallery-card-name {

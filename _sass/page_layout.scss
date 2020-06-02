@@ -23,15 +23,6 @@
   }
 }
 
-.block-element {
-  background-color: $block-background-color;
-  border-radius: $block-border-radius;
-  padding: $block-padding;
-  border: 1px solid black;
-  margin: $block-spacing / 2;
-  box-shadow: 0.2rem 0.2rem 0.3rem #00000088;
-}
-
 #site-header {
   display: flex;
   flex-direction: row;
@@ -54,6 +45,10 @@
   margin-right: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #2c2b2c;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 a:visited {
@@ -91,7 +86,7 @@ body {
   flex-direction: column;
   justify-content: start;
   min-height: calc(100% - 1rem);
-  width: min(120ch, 100%);
+  width: min(100ch, 100%);
   align-items: stretch;
 }
 

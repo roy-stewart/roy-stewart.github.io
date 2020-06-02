@@ -3,10 +3,22 @@
 
 @import 'variables';
 @import 'breakpoints';
+
+.block-element {
+    background-color: $block-background-color;
+    border-radius: $block-border-radius;
+    padding: $block-padding;
+    border: 1px solid black;
+    margin: 0 0 $block-spacing 0;
+    box-shadow: 0.2rem 0.2rem 0.3rem #00000088;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 @import 'page_layout';
 @import 'gallery';
 
-.section-title {
-    font-size: 2em;
-    font-weight: bold;
-}
+@import 'blog';
