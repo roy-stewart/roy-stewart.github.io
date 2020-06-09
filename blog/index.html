@@ -1,0 +1,43 @@
+---
+title: Blog
+layout: default
+---
+
+<header class="block-element">
+    <h1>{{ page.title }}</h1>
+</header>
+
+<section>
+    {% for post in paginator.posts %}
+        <div class="block-element post-preview">
+            <div class="post-preview-data">
+                <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <span class="post-preview-author">{{ post.author }}</span>
+                <span class="post-preview-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            <p>{{ post.content | truncatewords: 40}}</p>
+        </div>
+    {% endfor %}
+
+    <div id="blog-page-numbers" class="block-element">
+        {% if paginator.previous %}
+            <a id="previous-page" class="incremental-page-navigation-button" href="{{ paginator.previous_page }}">Prev</a>
+        {% else %}
+            <span id="previous-page" class="incremental-page-navigation-button">Prev</span>
+        {% endif %}
+
+        {% for pageNumber in (1..paginator.total_pages) %}
+            {% if pageNumber == paginator.page %}
+                <span class="blog-page-number current-page-number">{{ pageNumber }}</span>
+            {% else %}
+                <span class="blog-page-number">{{ pageNumber }}</span>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.previous %}
+            <a id="next-page" class="incremental-page-navigation-button" href="{{ paginator.next_page }}">Next</a>
+        {% else %}
+            <span id="next-page" class="incremental-page-navigation-button">Next</span>
+        {% endif %}
+    </div>
+</section>
