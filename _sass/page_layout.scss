@@ -85,9 +85,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  min-height: calc(100% - 1rem);
-  width: min(100ch, 100%);
+  min-height: calc(100% - 2rem);
+  width: min(100ch, calc(100% - 2rem));
   align-items: stretch;
+  margin: $block-spacing;
 }
 
 main {
