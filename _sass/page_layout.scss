@@ -1,7 +1,7 @@
 #site-nav-menu {
   overflow: hidden;
 
-  transition-property: max-height, margin, padding, border;
+  transition-property: max-height, margin, padding, border, box-shadow;
   transition-duration: 0.7s;
 
   display: flex;
@@ -15,7 +15,7 @@
     margin-bottom: 0.5rem;
     overflow: hidden;
     border: solid 0 black;
-    box-shadow: none;
+    box-shadow: 0 0 0 #00000088;
   }
 
   &.shown {
