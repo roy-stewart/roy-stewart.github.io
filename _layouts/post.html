@@ -17,10 +17,10 @@ layout: default
         Recent Posts
     </header>
 
-    {% for post in site.posts limit:5 %}
-    <div class="block-element">
-        <span>{{ post.title }}</span>
-    </div>
+    {% for post in site.posts limit: 5 %}
+        <div class="block-element">
+            <span>{{ post.title }}</span>
+        </div>
     {% endfor %}
 </section>
 
