@@ -1,0 +1,15 @@
+#site-footer-social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-link {
+    margin: 0.3em;
+
+    .social-logo {
+        width: 1.5em;
+        height: auto;
+    }
+}

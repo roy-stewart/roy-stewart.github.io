@@ -1,2 +1,9 @@
 - name: GitHub
+  image: /assets/github-logo.png
   url: https://github.com/roy-stewart
+- name: Facebook
+  image: /assets/facebook-logo.png
+  url: https://www.facebook.com/roy.stewart.innovations
+- name: Twitter
+  image: /assets/twitter-logo.png
+  url: https://twitter.com/TheHDGenius

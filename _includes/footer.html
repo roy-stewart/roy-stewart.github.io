@@ -1,11 +1,10 @@
 <footer id="site-footer" class="block-element">
-    <div>
-        <span>Social links</span>
-        <ul>
-            {% for link in site.data.social_links %}
-                <li><a href="{{ link.url }}">{{ link.name }}</a></li>
-            {% endfor %}
-        </ul>
+    <div id="site-footer-social-links">
+        {% for link in site.data.social_links %}
+                <a class="social-link" href="{{ link.url }}">
+                    <img class="social-logo" src="{{ link.image }}" alt="{{ link.name }}"/>
+                </a>
+        {% endfor %}
     </div>
     <div id="site-footer-description">
         {{ site.description }}
