@@ -4,8 +4,8 @@
 @import 'variables';
 @import 'breakpoints';
 
-body {
-    font-size: clamp(0.5cm, 2vh, 1.2cm);
+html {
+    font-size: 2vh;
 }
 
 .block-element {
