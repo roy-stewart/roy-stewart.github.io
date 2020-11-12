@@ -11,7 +11,7 @@ html {
 .block-element {
     background-color: $block-background-color;
     border-radius: $block-border-radius;
-    padding: $block-padding;
+    padding: $block-padding $block-padding * 1.5;
     border: 1px solid black;
     margin: 0 0 $block-spacing 0;
     box-shadow: 0.2rem 0.2rem 0.3rem #00000088;
