@@ -9,9 +9,11 @@
     <script src="/main.js" type="application/javascript"></script>
 </head>
 <body>
-    {% include header.html %}
-
-    {% include nav.html %}
+    <div id="floating-header">
+        {% include header.html %}
+    
+        {% include nav.html %}
+    </div>
 
     <main>
         {{ content }}

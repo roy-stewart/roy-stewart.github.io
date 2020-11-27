@@ -24,6 +24,14 @@
   }
 }
 
+#floating-header {
+  position: sticky;
+  top: 0;
+  padding-top: $block-spacing;
+  margin-top: - $block-spacing;
+  background-color:  $body-background-color;
+}
+
 #site-header {
   display: flex;
   flex-direction: row;
