@@ -62,7 +62,6 @@ a:visited {
 }
 
 #site-footer {
-  justify-self: end;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -92,25 +91,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  min-height: calc(100% - 2rem);
-  width: min(80ch, calc(100% - 2rem));
+  min-height: calc(100vh - 2rem);
+  width: min(80ch, calc(100vw - 2rem));
   align-items: stretch;
   margin: $block-spacing;
 }
 
 main {
-  flex: 6 30em;
-}
-
-@include small-computer {
-
-  body {
-    background-color: $body-background-color;
-    color: $text-color;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }
-
+  flex-grow: 1;
 }
