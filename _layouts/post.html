@@ -12,15 +12,4 @@ layout: default
     {{ content }}
 </article>
 
-<section id="recent-posts">
-    <header class="section-title block-element">
-        <h1>Recent Posts</h1>
-    </header>
-
-    {% for post in site.posts limit: 5 %}
-        <div class="block-element">
-            <span>{{ post.title }}</span>
-        </div>
-    {% endfor %}
-</section>
-
+{% include recent_posts.html %}

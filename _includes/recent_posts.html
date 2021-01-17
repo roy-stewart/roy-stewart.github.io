@@ -1,0 +1,14 @@
+<section id="recent-posts" class="block-element" aria-label="recent posts">
+    <header class="section-title">
+        <h1>Recent Posts</h1>
+    </header>
+
+    {% for post in site.posts limit: 5 %}
+        <hr/>
+        <div class="post-preview">
+            <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+            <span>{{ post.author }}</span>
+            <span>{{ post.date | date: "%B %d, %Y" }}</span>
+        </div>
+    {% endfor %}
+</section>

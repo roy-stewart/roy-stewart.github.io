@@ -100,3 +100,8 @@ body {
 main {
   flex-grow: 1;
 }
+
+.post-preview {
+  display: flex;
+  flex-direction: column;
+}
