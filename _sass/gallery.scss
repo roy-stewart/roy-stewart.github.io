@@ -1,66 +1,90 @@
-.card-gallery {
+#hoverable-card-gallery {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
-}
 
-$portfolio-card-height: 12rem;
-
-$card-name-displaced-height: 2rem;
-
-.portfolio-entry-card {
-  padding: 0;
-
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: space-between;
-
-  height: $portfolio-card-height;
-
-  .preview {
-    transition-property: margin-top;
-    transition-duration: 0.8s;
-
+  @media (hover: none) {
+    display: none;
+  }
+  
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @include large-computer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  $card-name-displaced-height: 2rem;
+  
+  $preview-image-height: 10rem;
+  
+  $portfolio-card-height: $preview-image-height + $card-name-displaced-height;
+  
+  .portfolio-entry-card {
+    
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    
+    height: $portfolio-card-height;
     padding: 0;
     margin: 0;
-    flex-grow: 1;
-    min-height: $portfolio-card-height - $card-name-displaced-height;
-    max-height: $portfolio-card-height - $card-name-displaced-height;
-    width: 100%;
-
-    text-align: center;
-  }
-
-  .gallery-card-name {
-    text-align: center;
-    font-weight: bold;
-    background-color: #2c2b2c;
-    padding: 0.5em;
-  }
-
-  .gallery-card-description {
-    padding: 1em;
-    max-height: $portfolio-card-height;
-    flex-grow: 1;
-  }
-
-  &:hover {
+    
     .preview {
-      margin-top: - ($portfolio-card-height - $card-name-displaced-height);
+      transition-property: margin-top;
+      transition-duration: 0.8s;
+  
+      padding: 0;
+      margin: 0;
+      flex-grow: 1;
+      min-height: $preview-image-height;
+      max-height: $preview-image-height;
+      width: 100%;
+  
+      text-align: center;
+    }
+  
+    .gallery-card-name {
+      text-align: center;
+      font-weight: bold;
+      line-height: 1em;
+      background-color: #2c2b2c;
+      padding: 0.5em;
+    }
+  
+    .gallery-card-description {
+      padding: 1em;
+      max-height: $portfolio-card-height;
+      flex-grow: 1;
+    }
+  
+    &:hover {
+      .preview {
+        margin-top: -$preview-image-height;
+      }
     }
   }
 }
 
-@include tablet {
-  .card-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+#standard-card-gallery {
+  display: flex;
+  flex-direction: column;
 
-@include large-computer {
-  .card-gallery {
-    grid-template-columns: repeat(4, 1fr);
+  @media (hover: hover) {
+    display: none;
+  }
+
+  .portfolio-entry-card {
+    display: flex;
+    flex-direction: row;
+    height: 10rem;
+    padding: 1rem;
+
+    .preview {
+      width: 10rem;
+    }
   }
 }
