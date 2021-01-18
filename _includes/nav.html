@@ -1,4 +1,4 @@
-<nav id="site-nav-menu" class="block-element">
+<nav id="site-nav-menu" class="block-element" aria-label="site navigation">
     {% for link in site.data.navbar_links %}
         <a href="{{link.url}}" class="nav-link">{{ link.name }}</a>
         {% unless forloop.last %}
