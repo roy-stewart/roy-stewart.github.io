@@ -36,11 +36,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 #site-title-block {
   display: flex;
   flex-direction: column;
+  align-items: end;
 }
 
 #site-header-title {
