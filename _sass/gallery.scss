@@ -34,7 +34,7 @@
     margin: 0;
     
     .preview {
-      transition-property: margin-top;
+      transition-property: margin-bottom;
       transition-duration: 0.8s;
   
       padding: 0;
@@ -56,6 +56,7 @@
     }
   
     .gallery-card-description {
+      background-color: $block-background-color;
       padding: 1em;
       max-height: $portfolio-card-height;
       flex-grow: 1;
@@ -64,7 +65,7 @@
   
     &:hover {
       .preview {
-        margin-top: -$preview-image-height;
+        margin-bottom: -$preview-image-height;
       }
     }
   }
