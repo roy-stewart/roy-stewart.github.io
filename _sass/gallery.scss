@@ -15,11 +15,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  $card-name-displaced-height: 2rem;
+  $card-name-height: 2rem;
   
   $preview-image-height: 10rem;
   
-  $portfolio-card-height: $preview-image-height + $card-name-displaced-height;
+  $portfolio-card-height: $preview-image-height + $card-name-height;
   
   .portfolio-entry-card {
     
@@ -59,6 +59,7 @@
       padding: 1em;
       max-height: $portfolio-card-height;
       flex-grow: 1;
+      margin: 0;
     }
   
     &:hover {
