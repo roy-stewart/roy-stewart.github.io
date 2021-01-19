@@ -10,12 +10,12 @@ layout: default
 <section>
     {% for post in paginator.posts %}
         <div class="block-element post-preview">
+            <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <div class="post-preview-data">
-                <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
                 <span class="post-preview-author">{{ post.author }}</span>
                 <span class="post-preview-date">{{ post.date | date: "%Y-%m-%d" }}</span>
             </div>
-            <p>{{ post.content | truncatewords: 40}}</p>
+            <p>{{ post.description }}</p>
         </div>
     {% endfor %}
 

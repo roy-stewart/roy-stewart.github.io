@@ -3,6 +3,7 @@ layout: post
 title:  "How to write better code by leveraging abstractions"
 date:   2020-06-01 22:01:00 -0400
 author: Roy Stewart
+description: One of the most underutilized tools at a developers disposal is abstraction. Abstraction can greatly reduce the amount of code that you rewrite while also making the code that you write much more meaningful. Learn how to utilize abstractions in everyday code to build better, stronger, and more flexible code bases.
 ---
 Perhaps one of the most common issues that many programmers face is that they write code that is literal and explicit rather than abstract and conceptually. When we utilize abstractions to write code we can better communicate out intention, make it easier to change our code base, and spend less time worrying about irrelevant details. This principle can be applied to a plethora of different situations, languages, and tools.
 
