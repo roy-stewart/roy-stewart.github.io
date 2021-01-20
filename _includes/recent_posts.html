@@ -3,12 +3,16 @@
         <h1>Recent Posts</h1>
     </header>
 
-    {% for post in site.posts limit: 5 %}
+    {% assign recent_posts = site.posts | where_exp: "post", "post.url != page.url" %}
+    {% for post in recent_posts | limit: 5 %}
         <hr/>
         <div class="post-preview">
-            <a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
-            <span>{{ post.author }}</span>
-            <span>{{ post.date | date: "%B %d, %Y" }}</span>
+            <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <div class="post-preview-data">
+                <span class="post-preview-author">{{ post.author }}</span>
+                <span class="post-preview-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+            </div>
+            <p>{{ post.description }}</p>
         </div>
     {% endfor %}
 </section>
