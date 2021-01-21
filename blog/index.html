@@ -20,24 +20,12 @@ layout: default
     {% endfor %}
 
     <div id="blog-page-numbers" class="block-element">
-        {% if paginator.previous %}
-            <a id="previous-page" class="incremental-page-navigation-button" href="{{ paginator.previous_page }}">Prev</a>
-        {% else %}
-            <span id="previous-page" class="incremental-page-navigation-button">Prev</span>
-        {% endif %}
+        <a id="previous-page" class="incremental-page-navigation-button" {% if paginator.previous %} href="{{ paginator.previous_page }}" {% endif %}>Prev</a>
 
         {% for pageNumber in (1..paginator.total_pages) %}
-            {% if pageNumber == paginator.page %}
-                <span class="blog-page-number current-page-number">{{ pageNumber }}</span>
-            {% else %}
-                <span class="blog-page-number">{{ pageNumber }}</span>
-            {% endif %}
+            <a class="blog-page-number" {% if pageNumber != paginator.page %} href="" {% endif %}>{{ pageNumber }}</a>
         {% endfor %}
 
-        {% if paginator.previous %}
-            <a id="next-page" class="incremental-page-navigation-button" href="{{ paginator.next_page }}">Next</a>
-        {% else %}
-            <span id="next-page" class="incremental-page-navigation-button">Next</span>
-        {% endif %}
+        <a id="next-page" class="incremental-page-navigation-button" {% if paginator.next %} href="{{ paginator.next_page }}" {% endif %}>Next</a>
     </div>
 </section>
