@@ -4,10 +4,6 @@
 @import 'variables';
 @import 'breakpoints';
 
-html {
-    font-size: 2vh;
-}
-
 .block-element {
     background-color: $block-background-color;
     border-radius: $block-border-radius;
