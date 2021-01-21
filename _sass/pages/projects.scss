@@ -1,6 +1,6 @@
 #hoverable-card-gallery {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   margin-bottom: 1rem;
 
@@ -9,10 +9,6 @@
   }
   
   @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  @include large-computer {
     grid-template-columns: repeat(3, 1fr);
   }
   

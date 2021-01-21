@@ -1,0 +1,15 @@
+.block-element {
+    background-color: $block-background-color;
+    border-radius: $block-border-radius;
+    padding: $block-padding $block-padding * 1.5;
+    border: 1px solid black;
+    margin: 0 0 $block-spacing 0;
+
+    & > :first-child {
+        margin-top: 0;
+    }
+    
+    & > :last-child {
+        margin-bottom: 0;
+    }
+}
