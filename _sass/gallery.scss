@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 1rem;
+  margin-bottom: 1rem;
 
   @media (hover: none) {
     display: none;
@@ -82,15 +83,12 @@
   .portfolio-entry-card {
     display: flex;
     flex-direction: row;
-    height: 10rem;
     padding: 1rem;
+  }
 
+  @media (max-width: 768px) {
     .preview {
-      width: 10rem;
+      display: none;
     }
   }
-}
-
-#hoverable-card-gallery, #standard-card-gallery {
-  margin-bottom: 1rem ;
 }
