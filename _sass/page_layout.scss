@@ -5,9 +5,13 @@
 #floating-header {
   position: sticky;
   top: 0;
+
+  // used to hide elements as they move above the header
   padding-top: $block-spacing;
   margin-top: - $block-spacing;
-  background-color:  $body-background-color;
+
+  $fade-distance: $block-spacing * 0.6;
+  background-image: linear-gradient(to top, transparent, rgba($body-background-color, 0.5) ($fade-distance / 4), rgba($body-background-color, 0.75) ($fade-distance / 2), $body-background-color $fade-distance);
 }
 
 a:visited {
