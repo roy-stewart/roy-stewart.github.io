@@ -14,6 +14,15 @@
   background-image: linear-gradient(to top, transparent, rgba($body-background-color, 0.5) ($fade-distance / 4), rgba($body-background-color, 0.75) ($fade-distance / 2), $body-background-color $fade-distance);
 }
 
+.section-header {
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+  }
+  
+  display: flex;
+  flex-direction: column;
+}
+
 a:visited {
   color: $visited-link-color;
 }
