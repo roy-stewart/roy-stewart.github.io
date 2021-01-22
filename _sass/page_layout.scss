@@ -23,7 +23,11 @@
   flex-direction: column;
 }
 
-a:visited {
+:link {
+  color: $link-color;
+}
+
+:visited {
   color: $visited-link-color;
 }
 

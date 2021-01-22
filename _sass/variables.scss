@@ -7,7 +7,9 @@ $block-background-color: #4d4b4e;
 $block-border-radius: 0.5rem;
 
 $text-color: #dddddd;
-$visited-link-color: #e57bff;
+
+$link-color: #e57bff;
+$visited-link-color: darken($link-color, 10%);
 
 $tertiary-color: #8b8b8b;
 $secondary-accent: #787878;
