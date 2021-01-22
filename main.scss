@@ -4,14 +4,8 @@
 @import 'variables';
 @import 'breakpoints';
 
+@import 'base';
 @import 'common';
-
-h1 {
-    margin: 0.3em 0;
-    line-height: 1em;
-    font-size: 2rem;
-    font-weight: bold;
-}
 
 @import 'page_layout';
 
