@@ -1,31 +1,32 @@
 ---
 title: Blog
-layout: default
+layout: flat_page
 ---
 
-<header class="block-element section-header">
+<header class="section-header">
     <h1>{{ page.title }}</h1>
 </header>
 
-<section>
-    {% for post in paginator.posts %}
-        <div class="block-element post-preview">
-            <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <div class="post-preview-data">
-                <span class="post-preview-author">{{ post.author }}</span>
-                <span class="post-preview-date">{{ post.date | date: "%Y-%m-%d" }}</span>
-            </div>
-            <p>{{ post.description }}</p>
+{% for post in paginator.posts %}
+    <div class="area-separator"></div>
+    <div class="post-preview">
+        <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post-preview-data">
+            <span class="post-preview-author">{{ post.author }}</span>
+            <span class="post-preview-date">{{ post.date | date: "%Y-%m-%d" }}</span>
         </div>
+        <p>{{ post.description }}</p>
+    </div>
+{% endfor %}
+
+<div class="area-separator"></div>
+
+<div id="blog-page-numbers">
+    <a id="previous-page" class="incremental-page-navigation-button" {% if paginator.previous %} href="{{ paginator.previous_page }}" {% endif %}>Prev</a>
+
+    {% for pageNumber in (1..paginator.total_pages) %}
+        <a class="blog-page-number" {% if pageNumber != paginator.page %} href="" {% endif %}>{{ pageNumber }}</a>
     {% endfor %}
 
-    <div id="blog-page-numbers" class="block-element">
-        <a id="previous-page" class="incremental-page-navigation-button" {% if paginator.previous %} href="{{ paginator.previous_page }}" {% endif %}>Prev</a>
-
-        {% for pageNumber in (1..paginator.total_pages) %}
-            <a class="blog-page-number" {% if pageNumber != paginator.page %} href="" {% endif %}>{{ pageNumber }}</a>
-        {% endfor %}
-
-        <a id="next-page" class="incremental-page-navigation-button" {% if paginator.next %} href="{{ paginator.next_page }}" {% endif %}>Next</a>
-    </div>
-</section>
+    <a id="next-page" class="incremental-page-navigation-button" {% if paginator.next %} href="{{ paginator.next_page }}" {% endif %}>Next</a>
+</div>
