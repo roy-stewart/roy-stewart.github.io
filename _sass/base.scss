@@ -6,8 +6,11 @@
     color: $visited-link-color;
 }
   
-hr {
-    width: 100%;
+.area-separator {
+    height: 1px;
+    width: calc(100% + $block-padding * 2);
+    margin: 0.5rem (-$block-padding * 1.5);
+    background-color: black;
 }
   
 h1 {
@@ -15,4 +18,8 @@ h1 {
     line-height: 1em;
     font-size: 2rem;
     font-weight: bold;
+}
+
+p {
+    text-align: justify;
 }

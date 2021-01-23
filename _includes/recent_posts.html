@@ -5,7 +5,7 @@
 
     {% assign recent_posts = site.posts | where_exp: "post", "post.url != page.url" %}
     {% for post in recent_posts | limit: 5 %}
-        <hr/>
+        <div class="area-separator"></div>
         <div class="post-preview">
             <h2 class="post-preview-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <div class="post-preview-data">
