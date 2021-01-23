@@ -8,7 +8,7 @@
   
 .area-separator {
     height: 1px;
-    width: calc(100% + $block-padding * 2);
+    width: calc(100% + ($block-padding * 2));
     margin: 0.5rem (-$block-padding * 1.5);
     background-color: black;
 }
