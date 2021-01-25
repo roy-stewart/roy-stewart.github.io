@@ -7,3 +7,6 @@
 - name: Twitter
   image: /assets/twitter-logo.png
   url: https://twitter.com/TheHDGenius
+- name: Thingiverse
+  image: /assets/thingiverse-logo.svg
+  url: https://www.thingiverse.com/hdgenius
