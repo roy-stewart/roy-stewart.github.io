@@ -1,0 +1,39 @@
+---
+layout: flat_page
+---
+
+{% assign project = page.project %}
+
+<style>
+    #project-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #project-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .project-link-logo {
+        height: 2em;
+        margin: 0.5em;
+    }
+</style>
+
+<div id="project-header">
+    <h1>{{ project.name }}</h1>
+
+    <div id="project-links">
+        {% for link in project.links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ link.image }}" class="project-link-logo" title="{{ link.description }}"/>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+{{ content }}
