@@ -8,7 +8,7 @@ baseurl: ""
 url: "http://hdgenius.me"
 
 markdown: kramdown
-theme: minima
+remote_theme: roy-stewart/HDJekyll
 plugins:
   - jekyll-feed
   - jekyll-paginate
