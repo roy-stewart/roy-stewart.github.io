@@ -3,13 +3,16 @@ layout: flat_page
 ---
 
 <style type="text/css" media="screen">
-    .container {
-      margin: 10px auto;
-      max-width: 600px;
+    .error-message {
+      max-width: 45ch;
+      margin: auto;
+    }
+
+    .error-message, .error-message * {
       text-align: center;
     }
 </style>
   
-<div class="container">
-    {{ content }}
+<div class="error-message">
+  {{content}}
 </div>
