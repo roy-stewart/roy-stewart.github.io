@@ -6,13 +6,6 @@
     color: $visited-link-color;
 }
   
-.area-separator {
-    height: 1px;
-    width: calc(100% + ($block-padding * 2));
-    margin: 0.75rem (-$block-padding * 1.5);
-    background-color: black;
-}
-  
 h1 {
     margin: 0.3em 0;
     line-height: 1em;

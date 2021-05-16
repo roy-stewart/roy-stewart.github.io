@@ -1,15 +1,9 @@
 #site-nav-menu {
-    $nav-height: 6.5rem;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    min-height: $nav-height;
-    max-height: $nav-height;
     text-align: center;
-  
-    transition-property: min-height, max-height, margin, padding, border-width, box-shadow;
-    transition-duration: 0.7s;
-    transition-timing-function: ease-in-out;
+    padding: 0;
   
     &:not(.shown) {
         min-height: 0;
@@ -22,4 +16,12 @@
         border-width: 0;
         box-shadow: 0 0 0 #00000088;
     }
+}
+
+.nav-link {
+    padding: 0.5em;
+}
+
+.nav-link:not(:last-child) {
+    border-bottom: solid 1px black;
 }
