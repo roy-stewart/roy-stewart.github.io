@@ -2,7 +2,7 @@
   image: /assets/github-logo.png
   url: https://github.com/roy-stewart
 - name: Facebook
-  image: /assets/facebook-logo.png
+  image: /assets/facebook-logo.svg
   url: https://www.facebook.com/TheHDGenius
 - name: Twitter
   image: /assets/twitter-logo.svg
