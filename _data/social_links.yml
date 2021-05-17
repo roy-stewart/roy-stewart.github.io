@@ -5,7 +5,7 @@
   image: /assets/facebook-logo.png
   url: https://www.facebook.com/TheHDGenius
 - name: Twitter
-  image: /assets/twitter-logo.png
+  image: /assets/twitter-logo.svg
   url: https://twitter.com/TheHDGenius
 - name: Thingiverse
   image: /assets/thingiverse-logo.svg
