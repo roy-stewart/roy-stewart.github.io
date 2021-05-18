@@ -36,7 +36,7 @@ gallery_items:
 <section id="hoverable-card-gallery">
   {% for item in projects_by_name %}
       <a href="{{ item.url }}" class="block-element portfolio-entry-card">
-          <img src="{{ item.preview_image }}" alt="Preview image" class="preview"/>
+          <img src="{{ item.preview_image }}" alt="Preview image" class="preview" aria-hidden="true"/>
           <span class="gallery-card-name">{{ item.name }}</span>
           <p class="gallery-card-description">{{ item.description }}</p>
       </a>
@@ -46,7 +46,7 @@ gallery_items:
 <section id="standard-card-gallery">
   {% for item in projects_by_name %}
       <div class="block-element portfolio-entry-card">
-          <img src="{{ item.preview_image }}" alt="Preview image" class="preview"/>
+          <img src="{{ item.preview_image }}" alt="Preview image" class="preview" aria-hidden="true"/>
           <div>
               <a href="{{ item.url }}" class="gallery-card-name">{{ item.name }}</a>
               <p class="gallery-card-description">{{ item.description }}</p>
