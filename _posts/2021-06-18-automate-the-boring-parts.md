@@ -45,7 +45,7 @@ Set-Alias list-scripts /path/to/list-scripts.ps1
 This allows you to essentially call this script as if it were a command line app from any location on your system. We can of course do this for every script that we create, but this process becomes tedious pretty fast. Instead, we can automate our automation and add a couple of lines to our powershell profile that will search for all scripts in our dedicated scripts folder and automatically create an alias for each. This code will look something like the following:
 
 ```
-Get-ChildItem /path/to/dedicated_scripts -Filter *.ps1 | Foreach-Object | {
+Get-ChildItem /path/to/dedicated_scripts -Filter *.ps1 | Foreach-Object {
     Set-Alias $_.BaseName $_.FullName
 }
 ```
